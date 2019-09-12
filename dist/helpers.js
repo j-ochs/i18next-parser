@@ -11,7 +11,7 @@ function dotPathToHash(entry) {var target = arguments.length > 1 && arguments[1]
   var separator = options.separator || '.';
   var newValue = entry.defaultValue || entry.defaultValue || options.value || '';
   if (options.useKeysAsDefaultValue) {
-    newValue = entry.key.substring(entry.key.indexOf('.') + 1, entry.key.length);
+    newValue = entry.key.substring(entry.key.indexOf(separator) + separator.length, entry.key.length);
   }
 
   if (path.endsWith(separator)) {
